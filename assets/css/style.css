@@ -45,7 +45,7 @@ h1 {
   line-height: 49px;
   /* border-bottom: 3px solid #dddddd; */
   font-family: 'Raleway', sans-serif;
-  color: #999;
+  color: #e65c00;
 }
 
 h2,
@@ -144,6 +144,12 @@ h3, h2 {
 
 /* portfolio page */
 
+@media screen and (max-width: 500px) {
+  .main-section {
+    width: 100%;
+  }
+}
+
 .work {
   position: relative;
   float: left;
@@ -230,7 +236,7 @@ input[type=submit] {
   font-size: 18px;
   color: #ffffff;
   cursor: pointer;
-  background: #4aaaa5;
+  background: #e65c00;
   border: 0 none;
 }
 
