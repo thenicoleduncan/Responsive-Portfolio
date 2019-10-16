@@ -13,6 +13,7 @@ body {
 
 /* general */
 
+
 .container {
   width: 100%;
   max-width: 960px;
@@ -156,16 +157,39 @@ h3, h2 {
   width: 274px;
   margin: 20px 0 25px;
   overflow: auto;
+  margin-right: 20px;
+  
 }
 
-.work:nth-child(even) {
-  margin-right: 40px;
+@media screen and (max-width: 500px) {
+  .work {
+    width: 100%;
+  }
+}
+
+.work img:hover {
+  animation: shake 0.5s;
+  }
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 .work img {
   width: 100%;
   border: 0 none;
   opacity: 0.8;
+  transition: transform 0.5s;
 }
 
 .work h3 {
@@ -193,14 +217,7 @@ h3, h2 {
 
 /* contact page */
 
-.row {
-  display: flex;
-}
 
-.column {
-  flex: 33.33%;
-  padding: 5px;
-}
 
 #contact-form ul {
   margin-bottom: 20px;
@@ -238,5 +255,37 @@ input[type=submit] {
   cursor: pointer;
   background: #e65c00;
   border: 0 none;
+  font-family: 'Raleway', sans-serif;
+  font-size: medium;
 }
+
+.social {
+  /* transform: rotate(90deg);
+  transform-origin: right;
+  margin-right;: 4rem; */
+  writing-mode: vertical-rl;
+  margin-left: 0%;
+}
+
+.social-icon-box {
+  width: 15%;
+  justify-content: right;
+
+}
+
+.row {
+  display: flex;
+  
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+  margin-top: 0;
+  /* float: right; */
+  /* justify-content: right; */
+  /* width: 100%; */
+}
+
+
 
